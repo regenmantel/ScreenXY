@@ -42,8 +42,6 @@ namespace BildschirmKoordinaten
 
         private void win_KeyDown(object sender, KeyEventArgs e)
         {
-            Clipboard.SetText(lblKoordinaten.Text);
-
             if (e.Control && e.KeyCode == Keys.ControlKey)
             {
                 _isFirstKeyPressed = true;
@@ -52,10 +50,17 @@ namespace BildschirmKoordinaten
             {
                 if(e.Control && e.KeyCode == Keys.C)
                 {
+                    Clipboard.SetText(lblKoordinaten.Text);
+
                     notifyIcon1.Icon = SystemIcons.Application;
                     notifyIcon1.Visible = true;
                     notifyIcon1.ShowBalloonTip(999999, "Information", "Koordinaten kopiert", ToolTipIcon.Info);
                 }
+            }
+
+            if(e.KeyCode == Keys.Space)
+            {
+                Application.Exit();
             }
         }
 
