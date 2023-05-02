@@ -55,7 +55,6 @@ namespace BildschirmKoordinaten
                     notifyIcon1.Icon = SystemIcons.Application;
                     notifyIcon1.Visible = true;
                     notifyIcon1.ShowBalloonTip(999999, "Information", "Koordinaten kopiert", ToolTipIcon.Info);
-                    
                 }
             }
         }
@@ -66,11 +65,10 @@ namespace BildschirmKoordinaten
             StreamReader sr = new StreamReader(txt);
             line = sr.ReadLine();
 
-            char[] split = new char[] { ';' };
-            string[] p = line.Split(split);
+            string[] splitChar = line.Split(';');
 
-            lblX = p[0].Substring(2);
-            lblY = p[1].Substring(2);
+            lblX = splitChar[0].Substring(2);
+            lblY = splitChar[1].Substring(2);
             
             sr.Close();
         }
