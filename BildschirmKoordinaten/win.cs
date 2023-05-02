@@ -10,10 +10,8 @@ namespace BildschirmKoordinaten
         private string koordinaten = "koordinatenSave.txt";
         private bool _isFirstKeyPressed = false;
 
-        private int xPosition;
-        private int yPosition;
-        private string lblX;
-        private string lblY;
+        private int xPosition, yPosition;
+        private string lblX, lblY;
         
         private void win_Load(object sender, EventArgs e)
         {
@@ -55,7 +53,6 @@ namespace BildschirmKoordinaten
                     notifyIcon1.Icon = SystemIcons.Application;
                     notifyIcon1.Visible = true;
                     notifyIcon1.ShowBalloonTip(999999, "Information", "Koordinaten kopiert", ToolTipIcon.Info);
-                    
                 }
             }
         }
