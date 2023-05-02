@@ -13,7 +13,7 @@ namespace BildschirmKoordinaten
         private int xPosition;
         private int yPosition;
         private string lblX;
-        private string lblY;
+        private string lblY; 
         
         private void win_Load(object sender, EventArgs e)
         {
