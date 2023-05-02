@@ -1,5 +1,7 @@
-  Program zur Ermittlung der Mauskoordinaten am Bildschirm
+Program zur Ermittlung der Mauskoordinaten am Bildschirm
   
-  Bewegbare Koodinatenanzeige, welche sich nach Beendung des Programmen speichert
+Bewegbare Koodinatenanzeige, welche sich nach Beendung des Programmen speichert
   
-  Bildschirmkoordinaten mit STRG + C kopieren
+Bildschirmkoordinaten mit STRG + C kopieren
+
+Program mit Leertaste beenden
