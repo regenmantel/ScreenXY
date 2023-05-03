@@ -52,6 +52,8 @@ namespace BildschirmKoordinaten
                 {
                     Clipboard.SetText(lblKoordinaten.Text);
 
+                    ///Kein Windows Notification Popup?
+
                     notifyIcon1.Icon = SystemIcons.Application;
                     notifyIcon1.Visible = true;
                     notifyIcon1.ShowBalloonTip(999999, "Information", "Koordinaten kopiert", ToolTipIcon.Info);
@@ -62,6 +64,11 @@ namespace BildschirmKoordinaten
             {
                 Application.Exit();
             }
+        }
+
+        private void win_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            writeText(koordinaten);
         }
 
         private void readText(string txt)
@@ -91,11 +98,6 @@ namespace BildschirmKoordinaten
                 sw.WriteLine("x:" + lblKoordinaten.Left + ";y:" + lblKoordinaten.Top);
                 sw.Close();
             }
-        }
-
-        private void win_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            writeText(koordinaten);
-        }
+        }        
     }
 } 
