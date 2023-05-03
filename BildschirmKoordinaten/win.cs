@@ -66,7 +66,7 @@ namespace BildschirmKoordinaten
 
         private void readText(string txt)
         {
-            String line;
+            string line;
             StreamReader sr = new StreamReader(txt);
             line = sr.ReadLine();
 
